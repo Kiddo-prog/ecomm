@@ -1,9 +1,8 @@
 const {MongoClient} = require('mongodb');
+const PASSWORD = require('dotenv').config();
 
 async function main(){
-  const uri = "+srv://ecomm:mubi1234@cluster0.nsg0n.mongodb.net/ecommerceDB?";
-
-
+  const uri = PASSWORD;
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   try {
